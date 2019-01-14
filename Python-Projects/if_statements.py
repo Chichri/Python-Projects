@@ -43,4 +43,14 @@ print("\n")
 dairy = ['Milk', 'Cheese']
 if 'Milk' and 'Cheese' in dairy:
     print("Dairy products are tasty")
-#and can be used to check multiple things at once 
+#and can be used to check multiple things at once
+
+print("\n")
+
+age = 18
+if age <= 18:
+    print("You are of voting age")
+else:
+    print("You are too young to vote")
+#This is an else if statemnt. It provides other outcomes for the if statements
+#This produces the first message. Lowering var 'age' changes it to the second
