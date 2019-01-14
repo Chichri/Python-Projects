@@ -1,3 +1,5 @@
+#Try out space: Unexplained examples of things you can do in python
+
 hero = "Martin Luther King Jr "
 quote = ' "I have a dream "'
 A_wise_mans_proclamation = hero + "once said" + quote
@@ -47,3 +49,8 @@ print("\n")
 
 places.sort(reverse = True)
 print(places)
+
+print("\n")
+
+car = 'subaru'
+print(car == 'subaru')
