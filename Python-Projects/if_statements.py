@@ -54,3 +54,33 @@ else:
     print("You are too young to vote")
 #This is an else if statemnt. It provides other outcomes for the if statements
 #This produces the first message. Lowering var 'age' changes it to the second
+
+print("\n")
+
+height = 6
+
+if height > 6:
+    print("You are too short for this provides")
+elif height < 6:
+    print("you are two tall for this ride")
+elif height == 6:
+    print("You can go on this ride")
+else:
+    print("You cannot go on this ride")
+#This is an elif chain. Essentially an else if statement with multiple "ifs"
+#The code evalutes each if untill it reach on the fits the requirements
+#The code then skips the rest
+#The else is not needed, unless a catch-all for the unforseen is needed
+
+print("\n")
+
+whatever = 5
+
+if whatever == 5:
+    print("Whatever")
+if whatever > 3:
+    print("Whatever 2: electric boogalo")
+if whatever < 6:
+    print("Whatever the third")
+#if chains like these check multiple conditions and produce multiple outcomes
+#Always omit the else on this type of chains
