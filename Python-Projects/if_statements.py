@@ -84,3 +84,14 @@ if whatever < 6:
     print("Whatever the third")
 #if chains like these check multiple conditions and produce multiple outcomes
 #Always omit the else on this type of chains
+
+print("\n")
+
+requested_toppings = ['mushrooms', 'peppers', 'olives']
+
+for requested_topping in requested_toppings:
+    if requested_topping == 'peppers':
+        print("Sorry, we're out of peppers")
+
+else:
+    print("Adding " + requested_topping + ".")
