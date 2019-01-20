@@ -62,3 +62,39 @@ if alien_color == 'green':
     print("5 points achived")
 if alien_color != 'green':
     print("10 points achived")
+
+print("\n")
+
+usernames = ['Tehdude', 'Robloxkidd9', 'Vartaxxx', 'Parzival', 'Admin']
+
+for username in usernames:
+    if username == "Admin":
+        print("Hello Admin, Welcome back. Would you like a status report?")
+    else:
+         print("Hello " + username + ", Welcome back")
+
+print("\n")
+
+current_users = ["test", "test1", 'test2', 'test3', 'test4' ]
+
+new_users = ['test1.0', 'test1', 'test5', 'test6']
+
+for new_user in new_users:
+    if new_user in current_users:
+        print("Sorry, but that name is taken")
+    else:
+        print('The username ' + new_user + ' is available')
+
+print("\n")
+
+ordinal_numbers = list(range(1,10))
+
+for num in ordinal_numbers:
+    if num == 1:
+        print('1st')
+    if num == 2:
+        print('2nd')
+    if num == 3:
+        print('3rd')
+    elif num > 3:
+        print(str(num) + 'th')
