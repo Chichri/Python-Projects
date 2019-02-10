@@ -23,3 +23,32 @@ alien_0['temporarykey'] = 'useless'
 del alien_0['temporarykey']
 print(alien_0)
 #Key pairs can be removed through del
+
+print('\n')
+
+favorite_languages = {
+'jen': 'python',
+'sarah': 'c',
+'edward': 'ruby',
+'phil': 'python',
+}
+
+print("Sarah's favorite language is " +
+favorite_languages['sarah'].title() + ".")
+#As you can see, this dictionary has been broken into multiple lines.
+#When your dictionary (or list or tuple) will exceed 80 chars, this is good form
+#This rule is to help prevent extremly long lines of code that become tedious to read
+
+print("\n")
+
+user_0 = {
+'username': 'efermi',
+'first': 'enrico',
+'last': 'fermi',
+}
+
+for key, value in user_0.items():
+    print("\nKey: " + key)
+    print('Value: ' + value)
+#As shown, it is possible to loop through dictionaries
+#note that key and value are just variables, not some tool in Python

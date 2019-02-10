@@ -60,7 +60,7 @@ print("\n")
 height = 6
 
 if height > 6:
-    print("You are too short for this provides")
+    print("You are too short for this ride")
 elif height < 6:
     print("you are two tall for this ride")
 elif height == 6:

@@ -52,7 +52,7 @@ for value in range(1, 11):
 print(squares)
 #The range function can be configured to produce almost any set of numbers
 #In the program above, we made the var square to equal var value squared
-#Python understands exponents as two asterisks followed by the exponents
+#Python understands exponents as two asterisks followed by the exponent
 #Here, value is each number produce by the range (1-10)
 #Therefore square becomes the square of each number
 #Finally, append fills the premade list until the last value is calculated

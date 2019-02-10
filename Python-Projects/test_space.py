@@ -98,3 +98,10 @@ for num in ordinal_numbers:
         print('3rd')
     elif num > 3:
         print(str(num) + 'th')
+
+print("\n")
+
+Hank = {'first_name': 'Hank', 'last_name': 'Anderson', 'city': 'Detroit'}
+
+print("Lieutenant " + Hank['first_name'] + ' ' + Hank['last_name'] +
+" lives in the city of " + Hank['city'])
