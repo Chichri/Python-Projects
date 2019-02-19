@@ -105,3 +105,10 @@ Hank = {'first_name': 'Hank', 'last_name': 'Anderson', 'city': 'Detroit'}
 
 print("Lieutenant " + Hank['first_name'] + ' ' + Hank['last_name'] +
 " lives in the city of " + Hank['city'])
+
+print("\n")
+
+rivers = {'egypt': 'nile', 'west virgina': 'potomac', 'india': 'ganges' }
+
+for key, value in rivers.items():
+    print('The '+ value.title() + ' runs through ' + key.title())

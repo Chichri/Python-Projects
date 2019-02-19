@@ -41,6 +41,36 @@ favorite_languages['sarah'].title() + ".")
 
 print("\n")
 
+for name in favorite_languages.keys():
+    print(name.title())
+#The for loops parameters assign the keys of the dictionary to var usernames
+#note that key and value are in fact terms in python, not just named vairables
+
+print("\n")
+
+#Also note that dictionaries loop through keys by default, so this works too:
+for name in favorite_languages:
+    print(name.title())
+
+print("\n")
+
+friends = ['phil',]
+
+
+if name in friends:
+    print("Hey, " + name.title() + ', ' + "I see that your favorite laguage is "
+    + favorite_languages[name].title())
+#Here we can see that one can cross-refrence other lists with dictionaries
+
+print("\n")
+
+print("The following laguages have been metioned:")
+for language in set(favorite_languages.values()):
+    print(language.title())
+#set removes repetion. Python was metioned twice, but we only need in once
+
+print("\n")
+
 user_0 = {
 'username': 'efermi',
 'first': 'enrico',
@@ -50,5 +80,5 @@ user_0 = {
 for key, value in user_0.items():
     print("\nKey: " + key)
     print('Value: ' + value)
-#As shown, it is possible to loop through dictionaries
-#note that key and value are just variables, not some tool in Python
+#As shown, it is possible to loop through dictionaries with both keys and values
+#items is required for the code to recognize the keys and values when used as such

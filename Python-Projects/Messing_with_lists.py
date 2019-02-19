@@ -1,7 +1,8 @@
 classes = ['Fighter', 'Rogue', 'Bard', 'Cleric']
 message = "My favorite class is the " + classes[2].title()
 print(message)
-#Classes is now a list containing these four items
+#This is a list. It can be used to contain information
+#classes is now a list containing these four items
 #You can select items from the list for printing or other uses
 #The index of a list begins at zero, making the third option, "Bard", the second
 
