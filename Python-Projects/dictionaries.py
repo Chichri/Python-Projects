@@ -82,3 +82,36 @@ for key, value in user_0.items():
     print('Value: ' + value)
 #As shown, it is possible to loop through dictionaries with both keys and values
 #items is required for the code to recognize the keys and values when used as such
+
+print("\n")
+
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'yellow', 'points': 10}
+alien_2 = {'color': 'red', 'points': 15}
+
+aliens = [alien_0, alien_1, alien_2]
+
+for alien in aliens:
+    print(alien)
+#This is whats called nesting, storing dictionaries or the like in a lists
+#Note that this doesn't work in some conditions, or in some languages at all
+
+print("\n")
+
+users = {
+'aeinstein': {
+'first': 'albert',
+'last': 'einstein',
+'location': 'princeton',
+}
+}
+
+for username, user_info in users.items():
+    print("\nUsername: " + username)
+    full_name = user_info['first'] + " " + user_info['last']
+    location = user_info['location']
+
+    print("\tFull_name: " + full_name.title())
+    print("\tLocation: " + location.title())
+#This is another example of nesting, although here we nest a dict within a dict
+#Notice how the program is structured to access the keys within the dicts 
