@@ -114,4 +114,4 @@ for username, user_info in users.items():
     print("\tFull_name: " + full_name.title())
     print("\tLocation: " + location.title())
 #This is another example of nesting, although here we nest a dict within a dict
-#Notice how the program is structured to access the keys within the dicts 
+#Notice how the program is structured to access the keys within the dicts
