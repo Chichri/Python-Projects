@@ -14,6 +14,8 @@ age = input('How old are you?\n')
 age = int(age)
 if age >= 5:
     print('True')
+else:
+    print('False')
 #Remeber to coveret your input to int if you want to work with integers
 
 print('\n')
@@ -35,3 +37,21 @@ else:
 #Therefore, an if statement alows us to check if the remainder is zero or not
 
 print('\n')
+
+current_number = 1
+while current_number <= 5:
+    print(current_number)
+    current_number += 1
+#This is a while loop
+#While loops run each line of the loop while the condition is true
+#This is handy for loops that need to trigger for multiple conditions
+
+print('\n')
+
+prompt = "Remeber the first program? Well I'm back with the same rules"
+prompt += "\nEnter 'quit' to end the program"
+space = ''
+
+while space != 'quit':
+    space = input(prompt)
+    print(prompt)
