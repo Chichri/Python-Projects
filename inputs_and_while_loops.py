@@ -55,3 +55,24 @@ space = ''
 while space != 'quit':
     space = input(prompt)
     print(prompt)
+#This while loop runs infintely until it is given the string value 'quit'
+#This works by assigin var space as an empty string
+#The loop then checks the string each time, before print the users Input
+#If the input is quit, the program ends. Elsewise, it prints to the console
+
+print('\n')
+
+active = True
+while active:
+    space = input(prompt)
+
+    if space == 'quit':
+        active = False
+    else:
+        print(space)
+#The code above is identical to the previous segment, with once change
+#Here we used a vairiable named active. This vairiable serves as a Flag
+#Flags are vairiables that remain true/false under myraid conditions
+#They are used as a tripwires to dectect changes in input and react to them
+
+print('\n')
