@@ -78,3 +78,20 @@ while active:
 #They are used as a tripwires to dectect changes in input and react to them
 
 print('\n')
+
+prompt3 = "Apparently the third time didn't do it. Here we go again."
+prompt3 += "\nEnter 'quit' to end the program\n"
+
+while True:
+    entry = input(prompt3)
+
+    if entry == 'quit':
+        break
+    else:
+        print(entry)
+#Once again, this section repeats what input is given to it
+#However, this time it uses break to exit the inifinte loop
+#When a loop starts with 'while True', it will run until it enounters a break
+#Here break is ran when the string equal 'quit', exiting the loop
+
+print('\n')
