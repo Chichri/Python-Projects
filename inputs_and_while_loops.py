@@ -48,13 +48,13 @@ while current_number <= 5:
 
 print('\n')
 
-prompt = "Remeber the first program? Well I'm back with the same rules"
-prompt += "\nEnter 'quit' to end the program"
+prompt = "remember the first program? It's back but now you can quit it"
+prompt += "\nEnter 'quit' to end the program\n"
 space = ''
 
 while space != 'quit':
     space = input(prompt)
-    print(prompt)
+    print(space)
 #This while loop runs infintely until it is given the string value 'quit'
 #This works by assigin var space as an empty string
 #The loop then checks the string each time, before print the users Input
@@ -62,9 +62,11 @@ while space != 'quit':
 
 print('\n')
 
+prompt2 = "Third times the charm, right?"
+prompt2 += "\nEnter 'quit' to end the program\n"
 active = True
 while active:
-    space = input(prompt)
+    space = input(prompt2)
 
     if space == 'quit':
         active = False
