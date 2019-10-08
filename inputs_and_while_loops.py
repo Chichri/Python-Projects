@@ -127,12 +127,10 @@ pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
 print(pets)
 print('\n')
 while 'cat' in pets:
-    pets.remove(cats)
+    pets.remove('cat')
 
 print(pets)
 
 #This while loop removes all instances of 'cat' while in pets
 #The loop runs as long as there is an insatance of 'cat' in the loop pets
 #Within the loop, cats are remove from the list, then the list is printed
-
-print('\n')

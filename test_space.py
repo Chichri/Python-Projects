@@ -112,3 +112,78 @@ rivers = {'egypt': 'nile', 'west virgina': 'potomac', 'india': 'ganges' }
 
 for key, value in rivers.items():
     print('The '+ value.title() + ' runs through ' + key.title())
+
+print('\n')
+
+print('A deli makes sandwichs')
+print('\n')
+
+sandwich_orders = ['Reuben', 'BLT', 'Grilled Cheese', 'Burger', 'Ham']
+finished_sandwichs = []
+
+while sandwich_orders:
+    sandwich = sandwich_orders.pop()
+    print('The ' + sandwich + ' is almost done')
+    finished_sandwichs.append(sandwich)
+
+print('\n')
+
+while finished_sandwichs:
+    finished_sandwich = finished_sandwichs.pop()
+    print('The ' + finished_sandwich + ' is finished')
+
+
+print('\n')
+
+print('Today is a new day. The deli has run out of pastrami')
+print('\n')
+
+sandwich_orders2 = ['Pastrami', 'Grilled Cheese', 'Burger', 'Ham', 'Pastrami']
+finished_sandwichs2 = []
+
+while 'Pastrami' in sandwich_orders2:
+    sandwich_orders2.remove('Pastrami')
+
+while sandwich_orders2:
+    sandwich2 = sandwich_orders2.pop()
+    print('The ' + sandwich2 + ' is almost done')
+    finished_sandwichs2.append(sandwich2)
+
+print('\n')
+
+while finished_sandwichs2:
+    finished_sandwich2 = finished_sandwichs2.pop()
+    print('The ' + finished_sandwich2 + ' is finished')
+
+print('\n')
+
+paris_total = 0
+houston_total = 0
+tokyo_total = 0
+
+print('A poll on popular vaction destinations is issued')
+print('\n')
+
+
+poll = {'Joey': 'Paris', 'Alica': 'Tokyo', 'Chris': 'Paris', 'Sarah': 'Houston',
+'Kian': 'Tokyo', 'Pablo': 'Paris'}
+
+results = poll
+print(results)
+
+print('\n')
+
+for place in poll.values():
+    if place == 'Paris':
+        paris_total += 1
+    if place == 'Tokyo':
+        tokyo_total += 1
+    if place == 'Houston':
+        houston_total += 1
+
+if paris_total > tokyo_total and paris_total > houston_total:
+    print('It seems that Paris is the most popular destination')
+elif tokyo_total > paris_total and tokyo_total > houston_total:
+    print('It seems that Tokyo is the most popular destination')
+elif houston_total > paris_total and houston_total > tokyo_total:
+    print('It seems that Houston is the most popular destination')
