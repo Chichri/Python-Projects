@@ -109,3 +109,30 @@ while current_number2 < 10:
 #Since the print is put after the continue, only odd numbers are printed
 
 print('\n')
+
+unconfirmed_users = ['alice', 'brian', 'candance']
+confirmed_users = []
+
+while unconfirmed_users:
+    current_user = unconfirmed_users.pop()
+
+    print('Verifying user: ' + current_user.title())
+    confirmed_users.append(current_user)
+#While loops can also be used to move items to and from different lists
+#Note that here, the while loops runs as long as unconfirmed users is not empty
+
+print('\n')
+
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+print(pets)
+print('\n')
+while 'cat' in pets:
+    pets.remove(cats)
+
+print(pets)
+
+#This while loop removes all instances of 'cat' while in pets
+#The loop runs as long as there is an insatance of 'cat' in the loop pets
+#Within the loop, cats are remove from the list, then the list is printed
+
+print('\n')
