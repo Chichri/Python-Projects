@@ -84,7 +84,6 @@ prompt3 += "\nEnter 'quit' to end the program\n"
 
 while True:
     entry = input(prompt3)
-
     if entry == 'quit':
         break
     else:
@@ -93,5 +92,20 @@ while True:
 #However, this time it uses break to exit the inifinte loop
 #When a loop starts with 'while True', it will run until it enounters a break
 #Here break is ran when the string equal 'quit', exiting the loop
+
+print('\n')
+
+current_number2 = 0
+while current_number2 < 10:
+    current_number2 += 1
+    if current_number2 % 2 ==0:
+        continue
+
+    print(current_number2)
+#This is a segement of code from previous in the program
+#Here, we have a vairable 'current_number2' assgined to zero
+#current_number2 is increased by one, then checked for whether it's even or not
+#If it is, the continue is ran, which restarts the loop from the beginning
+#Since the print is put after the continue, only odd numbers are printed
 
 print('\n')
