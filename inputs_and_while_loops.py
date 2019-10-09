@@ -134,3 +134,39 @@ print(pets)
 #This while loop removes all instances of 'cat' while in pets
 #The loop runs as long as there is an insatance of 'cat' in the loop pets
 #Within the loop, cats are remove from the list, then the list is printed
+
+print('\n')
+
+responses = {}
+
+polling_active = True
+
+while polling_active:
+    name = input("\nWhat is your name? ")
+    response = input("Which mountain would you like to climb someday? ")
+    responses[name] = response
+    repeat = input("Would you like to let another person respond?" + " (yes/no) ")
+    if repeat == 'no':
+        polling_active = False
+
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+    print(name + " would like to climb " + response + ".")
+#while loops can also be used to add things to dictonaries
+#Here, we have 2 inputs. One records the key, the other, the value
+#These are then entered into the empty dictionary on line 147
+#finally, the last input asks is another person will take the poll
+#If yes is entered, the loop resarts since the flag is still True
+#If no is entered, the flag becomes false and the loop ends
+#The results are then printed
+
+#------------------------------------------------------------------------------#
+
+# x = 1
+# while x < 2:
+#   print(x)
+
+#If this were not commented, it would run forever, an infinite loop
+#Be sure to recognize that your programs do not contain infinte loops
+#If you do  run an infinite loop, Cntrl-C will end the displying of output
+#If you are running an embeded text editor, you may have to close the window
