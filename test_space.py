@@ -187,3 +187,15 @@ elif tokyo_total > paris_total and tokyo_total > houston_total:
     print('It seems that Tokyo is the most popular destination')
 elif houston_total > paris_total and houston_total > tokyo_total:
     print('It seems that Houston is the most popular destination')
+
+print('\n')
+
+def display_message():
+    print('In this chapter, I am learning about functions')
+
+display_message()
+
+def favorite_book(book):
+    print('My favorite book is ' + book.title() + '!')
+
+favorite_book('dune')
