@@ -199,3 +199,13 @@ def favorite_book(book):
     print('My favorite book is ' + book.title() + '!')
 
 favorite_book('dune')
+
+print('\n')
+
+def make_shirt(size, text):
+    print('To confirm, you want a size ' + size + ' t-shirt with the message: '
+    + text + ' printed on it?')
+
+make_shirt('large', 'all my vices are devices')
+
+make_shirt(size='small', text='YEET')

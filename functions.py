@@ -51,4 +51,8 @@ def describe_animal(pet_name, animal_type='dog'):
 
 describe_animal('willie')
 #I've re-written the function to include a default value, animal_type='dog'
-#When the function is called,
+#When the function is called, any instance of animal_type will be dog by default
+#Therefore, all that needs to be filled in is the pet_name
+#Defualt values do have to be ordered correctly as written here
+
+print('\n')
