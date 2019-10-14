@@ -56,3 +56,48 @@ describe_animal('willie')
 #Defualt values do have to be ordered correctly as written here
 
 print('\n')
+
+def get_formatted_name(first_name, last_name):
+    """Return a full name, neatly formated"""
+    full_name = first_name + ' ' + last_name
+    return full_name.title()
+
+bassist = get_formatted_name('john', 'entwhistle')
+print(bassist)
+#This functions returns a value, the concatetation of first_name and last_name
+#Using this value, we can asign the function to a variable, then print it
+#This seems compliated for a simple print, but can be useful in longer programs
+
+print('\n')
+
+def get_formatted_name(first_name, last_name, middle_name=''):
+    if middle_name:
+        full_name = first_name + ' '+ middle_name + ' ' + last_name
+    else:
+        full_name = first_name + ' ' + last_name
+
+    return full_name.title()
+
+musician = get_formatted_name('john', 'hooker', 'lee')
+print(musician)
+
+legend = get_formatted_name('jimi', 'hendrix')
+print(legend)
+#Through the use of if statements, you can make certain perameters optional
+#Normaly, if you were to give the function a parameter and not use it in the -
+#call, you would get a positional arguement error
+#by making middle_names default value an empty string, you can make it optional
+#The catch is that middle_name must be last, or else names without it fail
+
+print('\n')
+
+def build_person(first_name , last_name ):
+    person = {'first': first_name, 'last': last_name}
+    return person
+
+everyman = build_person('John', 'Doe')
+print(everyman)
+#functions can be used with all manner of storig data, including dictionaries
+#With this the first and last name are labled and we can easily add more info
+
+print('\n')

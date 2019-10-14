@@ -209,3 +209,9 @@ def make_shirt(size, text):
 make_shirt('large', 'all my vices are devices')
 
 make_shirt(size='small', text='YEET')
+
+def make_shirt(size='Large', text='I love Python!'):
+    print('To confirm, you want a size ' + size + ' t-shirt with the message: '
+    + text + ' printed on it?')
+
+make_shirt()
