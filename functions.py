@@ -28,13 +28,8 @@ greet_user('larry')
 print('\n')
 
 def describe_animal(animal_type, pet_name):
-<<<<<<< HEAD
     print('I have a pet ' + animal_type  + '.')
     print('My ' + animal_type  + "'s name is " + pet_name.title() + '.' )
-=======
-    print('I have a pet ' + animal_type + '.')
-    print('My ' + animal_type + "'s name is " + pet_name.title() + '.' )
->>>>>>> 40d8460c0688f4b7bb986e38d651945455fe3937
 
 describe_animal('hamster', 'harry')
 #This function uses positional arguements to handle more than one arguement
@@ -44,18 +39,16 @@ describe_animal('hamster', 'harry')
 
 print('\n')
 
-<<<<<<< HEAD
 describe_animal(animal_type='hamster', pet_name='harry')
 #This is a keyword arguement. The name and the value are directly associated
 #Keyword arguements do not have to be ordered correctly
 
 print('\n')
-=======
+
 def describe_animal(pet_name, animal_type='dog'):
     print('I have a pet ' + animal_type + '.')
     print('My ' + animal_type + "'s name is " + pet_name.title() + '.' )
 
 describe_animal('willie')
 #I've re-written the function to include a default value, animal_type='dog'
-#When the function is called, 
->>>>>>> 40d8460c0688f4b7bb986e38d651945455fe3937
+#When the function is called,
