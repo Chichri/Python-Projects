@@ -101,3 +101,14 @@ print(everyman)
 #With this the first and last name are labled and we can easily add more info
 
 print('\n')
+
+while True:
+    print('Tell me your name\n')
+    f_name = input("First name:\n")
+    l_name = input("Last name:\n")
+    def person():
+        print('Hello ' + f_name + ' ' + l_name + '!')
+    person()
+    break
+#Here, we use a while loop with this function. The function prints a name
+#Without the break and with no exit conditions, this loop would be infinte 
