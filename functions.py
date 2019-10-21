@@ -111,4 +111,18 @@ while True:
     person()
     break
 #Here, we use a while loop with this function. The function prints a name
-#Without the break and with no exit conditions, this loop would be infinte 
+#Without the break and with no exit conditions, this loop would be infinte
+
+print('\n')
+
+def greet_users(names):
+    for name in names:
+        msg = "Hello, " + name.title() + "!"
+        print(msg)
+
+usernames = ['racter', 'ren', 'gaichu']
+greet_users(usernames)
+#This is a re written bit from the beginning. It greets people
+#Here, we've primed the function to take a list, assgined to parameter 'names'
+#Using a for loop, we loop through the list, printing a greeting each time
+#We then define the list as usernames, and sub that in for the parameter 

@@ -215,3 +215,12 @@ def make_shirt(size='Large', text='I love Python!'):
     + text + ' printed on it?')
 
 make_shirt()
+
+print('\n')
+
+def city_country(city, country):
+    print(city.title() + ', ' + country.title())
+
+city_country('oakland', 'usa')
+city_country('pointe a pitre', 'guadelopue')
+city_country('berlin', 'germany')
