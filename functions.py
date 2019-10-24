@@ -122,7 +122,29 @@ def greet_users(names):
 
 usernames = ['racter', 'ren', 'gaichu']
 greet_users(usernames)
-#This is a re written bit from the beginning. It greets people
+#This is a re written bit from the beginning. It greets people by passing a list
+#Passing a list in a function means using the fuction to act on the items within
 #Here, we've primed the function to take a list, assgined to parameter 'names'
 #Using a for loop, we loop through the list, printing a greeting each time
-#We then define the list as usernames, and sub that in for the parameter 
+#We then define the list as usernames, and sub that in for the parameter
+
+print('\n')
+
+unprinted_designs = ['D20', 'Master Sword', 'Bootleg Amibo']
+printed_designs = []
+
+def print_design(unprinted_designs, printed_designs):
+    while unprinted_designs():
+        current_design = unprinted_designs.pop()
+        print('Printing model: ' + current_design)
+        printed_designs.append(current_design)
+
+print('\n')
+
+def show_printed_models(printed_designs):
+    print('The following models have been printed: \n')
+    for printed_design in printed_designs:
+        print(printed_design)
+
+print_design()
+show_printed_model(printed_desegins)
