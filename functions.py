@@ -148,3 +148,7 @@ def show_printed_models(printed_designs):
 
 print_design()
 show_printed_model(printed_desegins)
+#In the previous segement, the function passed a list. What else can we do?
+#Here, two lists are defined at the head of the segement
+#Then, we write the first function, which passes and modifies the lists
+#The second function prints the newly filled list
