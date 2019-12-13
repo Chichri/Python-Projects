@@ -225,10 +225,29 @@ city_country('oakland', 'usa')
 city_country('pointe a pitre', 'guadelopue')
 city_country('berlin', 'germany')
 
-magicians = ['Chris Angel', 'David Copperfield', 'Harry Houdini']
+print('\n')
+
+magicians = [' Chris_Angel', ' David_Copperfield', ' Harry_Houdini']
 
 def show_magicians(magicians):
     for magician in magicians:
         print(magician)
 
-show_magicians(magicians = magicians)
+show_magicians(magicians)
+
+print('\n')
+
+great_magicians = []
+
+def make_great(magicians = magicians, great_magicians = great_magicians):
+    while magicians:
+        magician = magicians.pop()
+        magician = magician.replace( ' ', 'The Great ')
+        return magician
+        great_magicians.append(magician)
+
+
+
+make_great()
+show_magicians(magicians)
+print(great_magicians)
