@@ -227,7 +227,8 @@ city_country('berlin', 'germany')
 
 print('\n')
 
-magicians = [' Chris_Angel', ' David_Copperfield', ' Harry_Houdini']
+
+magicians = ["Chris_Angel", "David_Copperfield", "Harry_Houdini"]
 
 def show_magicians(magicians):
     for magician in magicians:
@@ -237,16 +238,9 @@ show_magicians(magicians)
 
 print('\n')
 
-great_magicians = []
-
 def make_great(magicians = magicians, great_magicians = great_magicians):
-    while magicians:
-        magician = magicians.pop()
-        magician = magician.replace( ' ', 'The Great ')
-        return magician
-        great_magicians.append(magician)
-
-
+    for i in range(len(magicians)):
+        magicians[i] = "The Great " + magicians[i]
 
 make_great()
 show_magicians(magicians)
