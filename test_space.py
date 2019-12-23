@@ -229,6 +229,7 @@ print('\n')
 
 
 magicians = ["Chris_Angel", "David_Copperfield", "Harry_Houdini"]
+great_magicians = []
 
 def show_magicians(magicians):
     for magician in magicians:
@@ -238,10 +239,23 @@ show_magicians(magicians)
 
 print('\n')
 
-def make_great(magicians = magicians, great_magicians = great_magicians):
+def make_great(magicians=magicians):
+    for i in range(len(magicians)):
+        magicians[i] = "The Great " + magicians[i]
+        great_magicians.append(magicians[i])
+
+make_great(magicians[:])
+show_magicians(magicians)
+print('\n')
+show_magicians(great_magicians)
+
+print('\n')
+
+def make_great(magicians=magicians):
     for i in range(len(magicians)):
         magicians[i] = "The Great " + magicians[i]
 
 make_great()
 show_magicians(magicians)
-print(great_magicians)
+
+print('\n')

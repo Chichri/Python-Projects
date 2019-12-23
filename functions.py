@@ -159,3 +159,16 @@ print_design(unprinted_designs[:], printed_designs)
 #This little repeat doesn't do anything, it just demostrates slice notation
 #slice notation duplicates a list for the use of a function,
 #If a function modifies a list but you want it to remain intact, this is useful
+
+print('\n')
+
+def make_pizza(*toppings):
+    print(toppings)
+
+make_pizza('pepperoni')
+make_pizza('pepperoni','olives','mushrooms')
+#Notice that so far, arguments have been exact, any devation creating an error
+#What if we don't know how many arguments they function will handle?
+#Then we can make the function pass an arbitrary amount of arguements
+#The '*' infront of the parameter lets it pass diffrent amount of arguements
+#Note that these values are packed into a tuple, so no list attributes 
