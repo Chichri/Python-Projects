@@ -130,11 +130,8 @@ greet_users(usernames)
 
 print('\n')
 
-unprinted_designs = ['D20', 'Master Sword', 'Bootleg Amibo']
-printed_designs = []
-
 def print_design(unprinted_designs, printed_designs):
-    while unprinted_designs():
+    while unprinted_designs:
         current_design = unprinted_designs.pop()
         print('Printing model: ' + current_design)
         printed_designs.append(current_design)
@@ -146,9 +143,19 @@ def show_printed_models(printed_designs):
     for printed_design in printed_designs:
         print(printed_design)
 
-print_design()
-show_printed_model(printed_desegins)
+unprinted_designs = ['D20', 'Master Sword', 'Bootleg Amibo']
+printed_designs = []
+
+print_design(unprinted_designs, printed_designs)
+show_printed_models(printed_designs)
 #In the previous segement, the function passed a list. What else can we do?
 #Here, two lists are defined at the head of the segement
 #Then, we write the first function, which passes and modifies the lists
 #The second function prints the newly filled list
+
+print('\n')
+
+print_design(unprinted_designs[:], printed_designs)
+#This little repeat doesn't do anything, it just demostrates slice notation
+#slice notation duplicates a list for the use of a function,
+#If a function modifies a list but you want it to remain intact, this is useful
