@@ -171,4 +171,38 @@ make_pizza('pepperoni','olives','mushrooms')
 #What if we don't know how many arguments they function will handle?
 #Then we can make the function pass an arbitrary amount of arguements
 #The '*' infront of the parameter lets it pass diffrent amount of arguements
-#Note that these values are packed into a tuple, so no list attributes 
+#Note that these values are packed into a tuple, so no list attributes
+
+print('\n')
+
+def make_pizza(size, *toppings):
+    print('Making a ' + str(size) + '-inch pizza with the following toppings:')
+    for topping in toppings:
+        print('-' + topping)
+
+make_pizza(12, 'pepperoni')
+print('\n')
+make_pizza(16, 'pepperoni','olives','mushrooms')
+#Positional and arbitrary arguments can be mixed, as shown above
+#This can be used to handle a wide variety of situations
+
+print('\n')
+
+def build_profile(first, last, **user_info):
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+user_profile = build_profile('albert', 'einstein', location = 'prinston',
+field = 'physics')
+
+print(user_profile)
+#Sometime, you'll want to pass an aribitray argument without even know the type-
+#of data that you'll be reciving. This can be handled
+#The '**' tells python to make an empty dictionary to store the vaules in as -
+#oppsed to a tuple. Then, you can pack whatever name value pairs you want in it
+#Then, once the dict'profile' is set up, you can give it any of the unforseen -
+#key, value pairs that come from dict'user_info'. Handy!
