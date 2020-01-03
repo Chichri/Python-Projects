@@ -259,3 +259,40 @@ make_great()
 show_magicians(magicians)
 
 print('\n')
+
+def make_sandwich(*ingrediants):
+    print('Making a sandwich with')
+    for ingrediant in ingrediants:
+        print('-' + ingrediant)
+
+make_sandwich('lettuce','tomato')
+make_sandwich('lettuce','tomato','bacon')
+make_sandwich('lettuce','tomato', 'bacon','mayo')
+
+print('\n')
+
+def build_profile(first, last, **user_info):
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+user_profile = build_profile('Cole', 'Lameyer',
+location = 'Bay Area',
+occupation = 'student',
+age = '16')
+
+print(user_profile)
+
+def make_car(make, model, **features):
+    car_info = {}
+    car_info['Company'] = make
+    car_info['Model'] = model
+    for key, value in features.items():
+        car_info[key] = value
+    return car_info
+
+car = make_car('Toyota','corrola', cheap = 'yes', airbag = 'maybe')
+print(car)

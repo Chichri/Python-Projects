@@ -206,3 +206,15 @@ print(user_profile)
 #oppsed to a tuple. Then, you can pack whatever name value pairs you want in it
 #Then, once the dict'profile' is set up, you can give it any of the unforseen -
 #key, value pairs that come from dict'user_info'. Handy!
+
+print('\n')
+
+import pizza
+
+pizza.make_pizza(16, 'pepperoni', 'cheese')
+#Okay, this is going to get complex
+#Pizza is a module, a seperate file that you import into the current file
+#Pizza.py only contains the make_pizza function from early, but importing pizza-
+#-allows us to use all the code in that file as if it were in this oneself.
+#This allows us to break up segements of code and let the master program focus -
+#-on the true logic of the code 
