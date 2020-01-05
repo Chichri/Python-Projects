@@ -217,4 +217,8 @@ pizza.make_pizza(16, 'pepperoni', 'cheese')
 #Pizza.py only contains the make_pizza function from early, but importing pizza-
 #-allows us to use all the code in that file as if it were in this oneself.
 #This allows us to break up segements of code and let the master program focus -
-#-on the true logic of the code 
+#-on the true logic of the code
+#functions in the module are called via the module_name.function_name() format
+#you can also specifically import individual function from a module using this -
+#format, from module_name import function_name,
+#Functions imported in this manner do not need the module name before the call 
