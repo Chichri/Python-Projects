@@ -200,8 +200,8 @@ user_profile = build_profile('albert', 'einstein', location = 'prinston',
 field = 'physics')
 
 print(user_profile)
-#Sometime, you'll want to pass an aribitray argument without even know the type-
-#of data that you'll be reciving. This can be handled
+#Sometimes, you'll want to pass an arbitrary argument without knowing the type-
+#of data that you'll be reciving. This can be handled with a '**' parameter
 #The '**' tells python to make an empty dictionary to store the vaules in as -
 #oppsed to a tuple. Then, you can pack whatever name value pairs you want in it
 #Then, once the dict'profile' is set up, you can give it any of the unforseen -
@@ -221,4 +221,23 @@ pizza.make_pizza(16, 'pepperoni', 'cheese')
 #functions in the module are called via the module_name.function_name() format
 #you can also specifically import individual function from a module using this -
 #format, from module_name import function_name,
-#Functions imported in this manner do not need the module name before the call 
+#Functions imported in this manner do not need the module name before the call
+
+from pizzas import make_pizza, make_pizza2, make_pizza3
+
+make_pizza(16, 'pepperoni', 'cheese')
+make_pizza2(16, 'pepperoni', 'cheese')
+make_pizza3(16, 'pepperoni', 'cheese')
+#You can also call multiple function using from by separating them with commas
+
+from pizza import make_pizza as mp
+
+mp(16, 'pepperoni', 'cheese')
+#Here, we are using an alias
+#Sometimes the name of an imported function will conflict with another function
+#In this case, we use 'as' to asign it a nickname that we can use when calling
+
+import pizza as p
+#Modules can also be aliased
+#Now, make_pizza would be called as p.make_pizza()
+#Although the original would stil work seeing as we keep
