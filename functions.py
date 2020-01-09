@@ -240,4 +240,16 @@ mp(16, 'pepperoni', 'cheese')
 import pizza as p
 #Modules can also be aliased
 #Now, make_pizza would be called as p.make_pizza()
-#Although the original would stil work seeing as we keep
+#Although the original would stil work seeing as we keep the old functions
+
+from pizza import *
+#importing an * imports every function within the module
+#This can be a time saver or a mistake, this is only here to serve as an example
+
+#Remeber to keep function names short and descriptive. They should be written -
+#- in underscores and lower case, and modules should follow these rules too
+#Functions should allways have a comment or a docstring explaining what they do
+#The PEP8 recommends that lines of code should be capped at 79 characters. Try -
+#-to follow this convention so that code doesn't strech for too long and become-
+#annoying to read.
+#All import statements should be written at the beginning of a file in practice 
