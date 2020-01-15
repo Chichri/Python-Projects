@@ -50,4 +50,6 @@ your_dog.sit()
 your_dog.roll_over()
 #There is no limit on how many instances can be created
 #The only rule is that each instance needs a unique variable name or a unique -
-#spot on whatever list or dictionary 
+#-spot on whatever list or dictionary
+
+print('\n')

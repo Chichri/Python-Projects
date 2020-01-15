@@ -296,3 +296,23 @@ def make_car(make, model, **features):
 
 car = make_car('Toyota','corrola', cheap = 'yes', airbag = 'maybe')
 print(car)
+
+print('\n')
+
+class Restaurant():
+    def __init__(init,name, cusine_type):
+        init.name = name
+        init.cusine_type = cusine_type
+
+    def describe_restaurant(init):
+        print('The restaurant ' + init.name.title() + ' does ' +
+        init.cusine_type.title() + '-style cusine')
+
+    def open_restaurant(init):
+        print('The restaurant ' + init.name.title() + ' is open.')
+
+los_cabalos = Restaurant('los cabalos', 'mexican')
+los_cabalos.describe_restaurant()
+los_cabalos.open_restaurant()
+print(los_cabalos.name.title())
+print(los_cabalos.cusine_type.title())
