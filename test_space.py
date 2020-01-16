@@ -316,3 +316,24 @@ los_cabalos.describe_restaurant()
 los_cabalos.open_restaurant()
 print(los_cabalos.name.title())
 print(los_cabalos.cusine_type.title())
+noodle_theroy = Restaurant('noodle theroy', 'thai-fusion')
+noodle_theroy.describe_restaurant()
+
+print('\n')
+
+class User():
+    def __init__(init,first_name,last_name,user_name):
+        init.first_name = first_name
+        init.last_name = last_name
+        init.user_name = user_name
+
+    def describe_user(init):
+        print(init.first_name.title() + ' ' + init.last_name.title() +
+        ' goes by ' + init.user_name)
+
+    def greet_user(init):
+        print('Hello, ' +  init.first_name.title() + ' ' + init.last_name.title())
+
+parzial = User('wade', 'watts', 'parzial')
+parzial.describe_user()
+parzial.greet_user()
