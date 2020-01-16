@@ -53,3 +53,18 @@ your_dog.roll_over()
 #-spot on whatever list or dictionary
 
 print('\n')
+
+class Car():
+    def __init__(self, make, model, year, odometer):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer = odometer
+
+    def get_descriptive_name(self):
+        long_name = str(self.year) +  ' ' + self.make.title() + ' ' + self.model.title() + ' ' str(self.odometer)
+        return long_name
+
+my_car = Car('audi','a4', 2016, 0)
+print(my_car.get_descriptive_name())
+#
