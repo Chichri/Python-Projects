@@ -61,10 +61,24 @@ class Car():
         self.year = year
         self.odometer = odometer
 
+    def update_odometer(self, mileage):
+        self.odometer = mileage
+
     def get_descriptive_name(self):
-        long_name = str(self.year) +  ' ' + self.make.title() + ' ' + self.model.title() + ' ' str(self.odometer)
+        long_name = str(self.year) +  ' ' + self.make.title() + ' ' + self.model.title()
         return long_name
+
+    def read_odometer(self):
+        print('This car has ' + str(self.odometer) + ' miles on it.')
 
 my_car = Car('audi','a4', 2016, 0)
 print(my_car.get_descriptive_name())
-#
+my_car.read_odometer()
+my_car.update_odometer(23)
+my_car.read_odometer()
+#class Car stores in variables to describe a car, including the odometer
+#odometers change overtime and therefore, the attribute needs to be modifiable
+#This is achived through method update_odometer.
+#update_odometer stores mileage in self.odometer
+#When update_odometer is called, we give an argument, in this case, 23
+#23 becomes mileage which becomes self.odometer, modifying the attribute
