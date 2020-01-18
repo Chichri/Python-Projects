@@ -61,8 +61,17 @@ class Car():
         self.year = year
         self.odometer = odometer
 
-    def update_odometer(self, mileage):
-        self.odometer = mileage
+    def set_odometer(self, mileage):
+        if mileage >= self.odometer:
+            self.odometer = mileage
+        else:
+            print("You can't roll back the odometer")
+
+    def update_odometer(self, miles):
+        if miles >= 0:
+            self.odometer += miles
+        else:
+            print("You can't roll back the odometer")
 
     def get_descriptive_name(self):
         long_name = str(self.year) +  ' ' + self.make.title() + ' ' + self.model.title()
@@ -74,11 +83,19 @@ class Car():
 my_car = Car('audi','a4', 2016, 0)
 print(my_car.get_descriptive_name())
 my_car.read_odometer()
-my_car.update_odometer(23)
+my_car.update_odometer(3)
+my_car.update_odometer(-2)
+my_car.read_odometer()
+my_car.set_odometer(23)
+my_car.set_odometer(12)
 my_car.read_odometer()
 #class Car stores in variables to describe a car, including the odometer
 #odometers change overtime and therefore, the attribute needs to be modifiable
-#This is achived through method update_odometer.
-#update_odometer stores mileage in self.odometer
-#When update_odometer is called, we give an argument, in this case, 23
-#23 becomes mileage which becomes self.odometer, modifying the attribute
+#This is achived through methods update_odometer and set_odometer
+#update_odometer adds the arguemen given to variable miles to self.odometer
+#set_odometer changes the value of self.odometer to the arguement given
+#note that an if else statement checks whether mileage is smaller then odometer
+#This is because odometers are one-way and should not be reversable
+#Conditions like these are easily applicable to methods
+
+print('\n')

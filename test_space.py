@@ -300,40 +300,62 @@ print(car)
 print('\n')
 
 class Restaurant():
-    def __init__(init,name, cusine_type):
+    def __init__(init,name, cusine_type, numbers_served):
         init.name = name
         init.cusine_type = cusine_type
+        init.numbers_served = numbers_served
+
 
     def describe_restaurant(init):
         print('The restaurant ' + init.name.title() + ' does ' +
-        init.cusine_type.title() + '-style cusine')
+        init.cusine_type.title() + '-style cusine.' + ' It has served ' +
+        str(init.numbers_served) + ' people.')
 
     def open_restaurant(init):
         print('The restaurant ' + init.name.title() + ' is open.')
 
-los_cabalos = Restaurant('los cabalos', 'mexican')
+    def set_served(init, served):
+        init.numbers_served = served
+
+    def increment_served(init, people):
+        init.numbers_served += people
+
+
+los_cabalos = Restaurant('los cabalos', 'mexican', 0)
+los_cabalos.set_served(143)
+los_cabalos.increment_served(23)
 los_cabalos.describe_restaurant()
 los_cabalos.open_restaurant()
 print(los_cabalos.name.title())
 print(los_cabalos.cusine_type.title())
-noodle_theroy = Restaurant('noodle theroy', 'thai-fusion')
+noodle_theroy = Restaurant('noodle theroy', 'thai-fusion', 0)
 noodle_theroy.describe_restaurant()
 
 print('\n')
 
 class User():
-    def __init__(init,first_name,last_name,user_name):
+    def __init__(init,first_name,last_name,user_name,login_attempts):
         init.first_name = first_name
         init.last_name = last_name
         init.user_name = user_name
+        init.login_attempts = login_attempts
 
     def describe_user(init):
         print(init.first_name.title() + ' ' + init.last_name.title() +
-        ' goes by ' + init.user_name)
+        ' goes by ' + init.user_name + '. ' + str(init.login_attempts) + ' login attempts')
 
     def greet_user(init):
         print('Hello, ' +  init.first_name.title() + ' ' + init.last_name.title())
 
-parzial = User('wade', 'watts', 'parzial')
+    def increment_logins(init):
+        init.login_attempts += 1
+
+    def reset_logins(init):
+        init.login_attempts = 0
+
+parzial = User('wade', 'watts', 'parzial', 0)
+parzial.increment_logins()
+parzial.describe_user()
+parzial.reset_logins()
 parzial.describe_user()
 parzial.greet_user()
