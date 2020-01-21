@@ -99,3 +99,10 @@ my_car.read_odometer()
 #Conditions like these are easily applicable to methods
 
 print('\n')
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year, odometer):
+        super().__init__(make, model, year, odometer)
+
+my_tesla = ElectricCar('tesla', 'model s', 2016, 0)
+print(my_tesla.get_descriptive_name())
