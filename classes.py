@@ -106,3 +106,12 @@ class ElectricCar(Car):
 
 my_tesla = ElectricCar('tesla', 'model s', 2016, 0)
 print(my_tesla.get_descriptive_name())
+my_tesla.read_odometer()
+#This is an example of inheritance
+#Inheritance is the making a version of another class
+#the new class will has the same attributes and methods, but can also add more
+#The class thats doing the inheriting is called the child class, or subclass
+#The class being inherited is called the parent class, or superclass
+#in refrence to superclasses, the super() function is a special function
+#super() links the parent class to the child class, callng init for ElectricCar
+#Now, any instance of ElectricCar has access to the attributes of Car
