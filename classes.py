@@ -103,6 +103,11 @@ print('\n')
 class ElectricCar(Car):
     def __init__(self, make, model, year, odometer):
         super().__init__(make, model, year, odometer)
+        self.battery_size = 70
+
+    def describe_battery(self):
+        print('This car has a ' + str(self.battery_size) + ' kW battery.')
+
 
 my_tesla = ElectricCar('tesla', 'model s', 2016, 0)
 print(my_tesla.get_descriptive_name())
@@ -115,3 +120,9 @@ my_tesla.read_odometer()
 #in refrence to superclasses, the super() function is a special function
 #super() links the parent class to the child class, callng init for ElectricCar
 #Now, any instance of ElectricCar has access to the attributes of Car
+
+print('\n')
+
+my_tesla.describe_battery()
+#This method utilizes an attriute that is unique to ElectricCar
+#Adding attributes and method for customization is trivial as shown above
