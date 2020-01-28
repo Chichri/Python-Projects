@@ -100,10 +100,19 @@ my_car.read_odometer()
 
 print('\n')
 
+class Ebattery():
+    def __init__(self, ebattery_size = 70):
+        self.ebattery_size = ebattery_size
+
+    def describe_ebattery(self):
+        print('This car has a ' + str(self.ebattery_size) + ' kW ebattery.')
+
+
 class ElectricCar(Car):
     def __init__(self, make, model, year, odometer):
         super().__init__(make, model, year, odometer)
         self.battery_size = 70
+        self.ebattery_size = Ebattery()
 
     def describe_battery(self):
         print('This car has a ' + str(self.battery_size) + ' kW battery.')
@@ -126,3 +135,5 @@ print('\n')
 my_tesla.describe_battery()
 #This method utilizes an attriute that is unique to ElectricCar
 #Adding attributes and method for customization is trivial as shown above
+
+my_tesla.ebattery.describe_ebattery()
