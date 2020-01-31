@@ -112,7 +112,7 @@ class ElectricCar(Car):
     def __init__(self, make, model, year, odometer):
         super().__init__(make, model, year, odometer)
         self.battery_size = 70
-        self.ebattery_size = Ebattery()
+        self.ebattery = Ebattery()
 
     def describe_battery(self):
         print('This car has a ' + str(self.battery_size) + ' kW battery.')
