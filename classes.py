@@ -137,3 +137,7 @@ my_tesla.describe_battery()
 #Adding attributes and method for customization is trivial as shown above
 
 my_tesla.ebattery.describe_ebattery()
+#This line calls a method from another class with an attribute from that class
+#This is done when lists of attributes for classes become long and un-wieldy
+#Organizing these attributes in separate classes can be an effective way to -
+#-segment your code, keeping things clean and orderly
