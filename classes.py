@@ -107,6 +107,13 @@ class Ebattery():
     def describe_ebattery(self):
         print('This car has a ' + str(self.ebattery_size) + ' kW ebattery.')
 
+    def get_range(self):
+        if self.ebattery_size == 70:
+            range = 240
+        elif self.ebattery_size == 80:
+            range = 290
+        message = ("This car has a range of " + str(range) + ' miles.')
+        print(message)
 
 class ElectricCar(Car):
     def __init__(self, make, model, year, odometer):
@@ -137,7 +144,11 @@ my_tesla.describe_battery()
 #Adding attributes and method for customization is trivial as shown above
 
 my_tesla.ebattery.describe_ebattery()
-#This line calls a method from another class with an attribute from that class
-#This is done when lists of attributes for classes become long and un-wieldy
-#Organizing these attributes in separate classes can be an effective way to -
-#-segment your code, keeping things clean and orderly
+#When modeling objects, you may find your list of attributes becoming long
+#Sometimes, some attributes may be grouped together for orginization
+#This call uses an attribute declared in another class tied to class ElectricCar
+
+my_tesla.ebattery.get_range()
+#This method is like the one above, stored within another class
+#Seeing as it ties directly in with the battery, it makes sense to include it -
+#-in the separate class 
