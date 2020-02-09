@@ -359,3 +359,77 @@ parzial.describe_user()
 parzial.reset_logins()
 parzial.describe_user()
 parzial.greet_user()
+
+print('\n')
+
+class IceCreamStand(Restaurant):
+    def __init__(init, name, cuisine_type, numbers_served):
+        super().__init__(name, cuisine_type, numbers_served)
+        init.flavors =  []
+
+    def stand(init):
+        print(init.name, 'serves:')
+        for flavor in init.flavors:
+            print(flavor)
+
+
+test = IceCreamStand('Smitten', 'ice cream', 0)
+test.flavors = ['chocolate', 'vanilla', 'strawberry']
+test.stand()
+
+print('\n')
+
+class Admin(User):
+    def __init__(init,first_name,last_name,user_name,login_attempts):
+        super().__init__(first_name,last_name,user_name,login_attempts)
+        init.privileges = []
+
+    def show_privileges(init):
+        print(init.user_name + ' can:')
+        for privilege in init.privileges:
+            print(privilege)
+
+ogg = Admin('oggden', 'morrow', 'The Great and Powerful Ogg', 0)
+ogg.privileges = ['can edit', 'can ban', 'can monitor chat']
+ogg.show_privileges()
+
+print('\n')
+
+class Car():
+    def __init__(self, make, model, year, odometer):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer = odometer
+
+class Ebattery():
+    def __init__(self, ebattery_size = 70):
+        self.ebattery_size = ebattery_size
+
+    def describe_ebattery(self):
+        print('This car has a ' + str(self.ebattery_size) + ' kW ebattery.')
+
+    def get_range(self):
+        if self.ebattery_size == 70:
+            range = 240
+        elif self.ebattery_size == 80:
+            range = 290
+        message = ("This car has a range of " + str(range) + ' miles.')
+        print(message)
+
+    def update_battery(self):
+        self.ebattery_size = 80
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year, odometer):
+        super().__init__(make, model, year, odometer)
+        self.battery_size = 70
+        self.ebattery = Ebattery()
+
+    def describe_battery(self):
+        print('This car has a ' + str(self.battery_size) + ' kW battery')
+
+temp = ElectricCar('toyota', 'corola','1950', 0)
+temp.ebattery.describe_ebattery()
+temp.ebattery.update_battery()
+temp.ebattery.describe_ebattery()

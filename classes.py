@@ -151,4 +151,4 @@ my_tesla.ebattery.describe_ebattery()
 my_tesla.ebattery.get_range()
 #This method is like the one above, stored within another class
 #Seeing as it ties directly in with the battery, it makes sense to include it -
-#-in the separate class 
+#-in the separate class
