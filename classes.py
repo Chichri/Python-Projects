@@ -152,3 +152,15 @@ my_tesla.ebattery.get_range()
 #This method is like the one above, stored within another class
 #Seeing as it ties directly in with the battery, it makes sense to include it -
 #-in the separate class
+
+print('\n')
+
+from class_Car2 import Car2
+
+my_new_car = Car2('audi','a4', 2016, 0)
+print(my_new_car.get_descriptive_name())
+#Like functions, classes can be imported from files as well
+#Car2 is identical to Car, the name changed to avoid a naming issue
+#The output is the exact same as the method called from class Car earlier
+
+print('\n') 
