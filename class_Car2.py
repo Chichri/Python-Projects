@@ -23,3 +23,27 @@ class Car2():
 
     def read_odometer(self):
         print('This car has ' + str(self.odometer) + ' miles on it.')
+
+class Ebattery2():
+    def __init__(self, ebattery_size = 70):
+        self.ebattery_size = ebattery_size
+
+    def describe_ebattery(self):
+        print('This car has a ' + str(self.ebattery_size) + ' kW ebattery.')
+
+    def get_range(self):
+        if self.ebattery_size == 70:
+            range = 240
+        elif self.ebattery_size == 80:
+            range = 290
+        message = ("This car has a range of " + str(range) + ' miles.')
+        print(message)
+
+class ElectricCar2(Car2):
+    def __init__(self, make, model, year, odometer):
+        super().__init__(make, model, year, odometer)
+        self.battery_size = 70
+        self.ebattery = Ebattery2()
+
+    def describe_battery(self):
+        print('This car has a ' + str(self.battery_size) + ' kW battery.')

@@ -163,4 +163,10 @@ print(my_new_car.get_descriptive_name())
 #Car2 is identical to Car, the name changed to avoid a naming issue
 #The output is the exact same as the method called from class Car earlier
 
-print('\n') 
+print('\n')
+
+from class_Car2 import Ebattery2, ElectricCar2
+
+my_new_car2 = ElectricCar2('audi','a4', 2016, 0,)
+print(my_new_car2.get_descriptive_name())
+#Multiple classes can also be imported from modules as well
