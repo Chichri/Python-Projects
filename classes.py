@@ -166,7 +166,11 @@ print(my_new_car.get_descriptive_name())
 print('\n')
 
 from class_Car2 import Ebattery2, ElectricCar2
+import class_Car2
 
 my_new_car2 = ElectricCar2('audi','a4', 2016, 0,)
 print(my_new_car2.get_descriptive_name())
+my_new_car3 = class_Car2.ElectricCar2('audi','a4', 2016, 0,)
+print(my_new_car3.get_descriptive_name())
 #Multiple classes can also be imported from modules as well
+#You could also just import the entire module an call objects with dot notation
