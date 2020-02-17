@@ -174,3 +174,22 @@ my_new_car3 = class_Car2.ElectricCar2('audi','a4', 2016, 0,)
 print(my_new_car3.get_descriptive_name())
 #Multiple classes can also be imported from modules as well
 #You could also just import the entire module an call objects with dot notation
+
+print('\n')
+
+from collections import OrderedDict
+
+favorite_languages = OrderedDict()
+
+favorite_languages['jen']= 'python'
+favorite_languages['sarah']= 'c'
+favorite_languages['edward']= 'ruby'
+favorite_languages['phil']= 'python'
+
+for name, language in favorite_languages.items():
+    print(name.title() + "'s favorite language is " + language.title())
+#OrderedDict is a class from the Python Standard Library
+#Modules from the standard library can be imported with any Python install
+#OrderedDict is a class that creates a Dictionary that keeps track of the order-
+#- in which the key-pairs were added
+#No curly brakets are needed because the dictionary is created by the class
