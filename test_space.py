@@ -433,3 +433,46 @@ temp = ElectricCar('toyota', 'corola','1950', 0)
 temp.ebattery.describe_ebattery()
 temp.ebattery.update_battery()
 temp.ebattery.describe_ebattery()
+
+print('\n')
+
+from collections import OrderedDict
+
+glossary = OrderedDict()
+
+glossary['ephemeral'] = 'temporary or insubstatial'
+glossary['opulent'] = 'lavish, expensive'
+glossary['gruntled'] = 'pleased, content'
+
+for word, definition in glossary.items():
+    print(word + ' means ' + definition)
+
+print('\n')
+
+from random import randint
+
+class Die():
+    def __init__(self, sides):
+        self.sides = sides
+
+    def roll_die(self):
+        print(randint(1, self.sides))
+
+    def roll_10x(self):
+        results = []
+        for roll_num in range(10):
+            result = randint(1, self.sides)
+            results.append(result)
+        print(results)
+
+
+
+d6 = Die(6)
+d6.roll_die()
+d6.roll_10x()
+d10 = Die(10)
+d10.roll_die()
+d10.roll_10x()
+d20 = Die(20)
+d20.roll_die()
+d20.roll_10x()

@@ -193,3 +193,13 @@ for name, language in favorite_languages.items():
 #OrderedDict is a class that creates a Dictionary that keeps track of the order-
 #- in which the key-pairs were added
 #No curly brakets are needed because the dictionary is created by the class
+
+#Classes are always named in CamelCaps, which is capitalizing the first letter-
+#- of each word and having no underscores between them
+#Instances and modules should have names that follow function styling, all -
+#lowercase with underscores between words
+#Imports should allways be at the top of the file in practice, and imports from-
+#the Python Standard Library should go first before modules you've written
+#Python Standard Library import lines should be separated from personal modules-
+#-by a line of blank space
+#
