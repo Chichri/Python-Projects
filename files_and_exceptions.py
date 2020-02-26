@@ -16,10 +16,23 @@ with open('/Users/cole/Desktop/Coding_Projects/Python-Projects/pi_digits.txt') a
 print('\n')
 
 file_path = '/Users/cole/Desktop/Coding_Projects/Python-Projects/pi_digits.txt'
-with open(file_name) as file_path:
+with open(file_path) as file_object:
     for line in file_object:
         print(line)
 #Sometimes you'll want to check each line of whats written in a file
 #You might be looking for information or trying to modify the text
 #Either way, a simple for loop can cycle through an entire file instantly
 #(This is also an example of tying a filename/filepath to a vairable)
+
+print('\n')
+
+with open(file_path) as file_object:
+    lines = file_object.readlines()
+    for line in lines:
+        print(line.rstrip())
+#You'll notice that open() is continuing to need to be called to work
+#This is because after the code excutes it's purpose, the file is closed
+#This is done to avoid complications and can be triggered manually with close()
+#To work with the contents of a file after it's closed, they must be copied
+#This can be done with the method readlines()
+#readlines() copies lines within a file to a list, which persists after closing
