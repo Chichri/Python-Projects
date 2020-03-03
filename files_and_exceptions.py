@@ -36,3 +36,16 @@ with open(file_path) as file_object:
 #To work with the contents of a file after it's closed, they must be copied
 #This can be done with the method readlines()
 #readlines() copies lines within a file to a list, which persists after closing
+
+print('\n)')
+
+pi_string = ' '
+for line in lines:
+    pi_string += line.rstrip()
+
+print(pi_string)
+print(len(pi_string))
+#This block of code works with the saved contents of pi_digits.txt
+#Empty list pi_string is created to hold the each line of the text from lines
+#Expect the lines have been stripped of right-ward whitespace with rstrip
+#This is just a simple example of how we can work the the contents of a file 
