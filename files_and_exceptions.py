@@ -48,4 +48,15 @@ print(len(pi_string))
 #This block of code works with the saved contents of pi_digits.txt
 #Empty list pi_string is created to hold the each line of the text from lines
 #Expect the lines have been stripped of right-ward whitespace with rstrip
-#This is just a simple example of how we can work the the contents of a file 
+#This is just a simple example of how we can work the the contents of a file
+
+print('\n')
+
+birthday = input('Enter your birthday in mmddyy format')
+if birthday in pi_string:
+    print('Your birthday is in the first 30 digits of pi. Litteraly how.')
+else:
+    print('Your birthday is not in the first 30 digits of pi. Shocker.')
+#Here's a classic, finding your birthday in the digits of pi
+#This is done classicaly with the first million digits of pi, but I was lazy
+#Either way, it's extremly simple to pick out specific occurances of text
