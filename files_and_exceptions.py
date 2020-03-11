@@ -60,3 +60,18 @@ else:
 #Here's a classic, finding your birthday in the digits of pi
 #This is done classicaly with the first million digits of pi, but I was lazy
 #Either way, it's extremly simple to pick out specific occurances of text
+
+print('\n')
+
+filename = 'programing.txt'
+with open(filename, 'w') as file_object:
+    file_object.write('test')
+with open(filename) as file_object:
+    contents = file_object.read()
+    print(contents)
+#The file 'programing.txt' did not exist on my machine until I ran This
+#open() will automatically create a called file if it does not exist
+#Here, the opened file is another text file, empty because it's new
+#Notice that open() here has two arguements
+#The 'w' opens the file in write mode, where it can be modified with write()
+#Without that second argument, open() defaults to read mode, as shown above 
