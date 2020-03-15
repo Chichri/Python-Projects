@@ -476,3 +476,23 @@ d10.roll_10x()
 d20 = Die(20)
 d20.roll_die()
 d20.roll_10x()
+
+print('\n')
+
+guest_name = input("Hello there! What's your name?\n")
+with open('guest.txt', 'r+') as file_object:
+    file_object.write(guest_name)
+    print("Your name has been added to the guest list.\n")
+    contents = file_object.readlines()
+
+check = input('Would you like to check the guest list? (Y/N)')
+if check == 'Yes':
+    print(contents)
+elif check == 'Y':
+    print(contents)
+elif check == 'yes':
+    print(contents)
+elif check == 'y':
+    print(contents)
+else:
+    print('Ok then')

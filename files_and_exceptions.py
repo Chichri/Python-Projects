@@ -31,7 +31,7 @@ with open(file_path) as file_object:
     for line in lines:
         print(line.rstrip())
 #You'll notice that open() is continuing to need to be called to work
-#This is because after the code excutes it's purpose, the file is closed
+#This is because after the code excutes its purpose, the file is closed
 #This is done to avoid complications and can be triggered manually with close()
 #To work with the contents of a file after it's closed, they must be copied
 #This can be done with the method readlines()
@@ -65,7 +65,7 @@ print('\n')
 
 filename = 'programing.txt'
 with open(filename, 'w') as file_object:
-    file_object.write('test')
+    file_object.write('I like programing.')
 with open(filename) as file_object:
     contents = file_object.read()
     print(contents)
@@ -74,4 +74,19 @@ with open(filename) as file_object:
 #Here, the opened file is another text file, empty because it's new
 #Notice that open() here has two arguements
 #The 'w' opens the file in write mode, where it can be modified with write()
-#Without that second argument, open() defaults to read mode, as shown above 
+#Without that second argument, open() defaults to read mode, as shown above
+#Be careful with write mode: if the file already exists, it will be erased upon-
+#- the returning of the file object
+
+print('\n')
+
+with open(filename, 'a') as file_object:
+    file_object.write(' I also like music!')
+
+with open(filename) as file_object:
+    contents = file_object.read()
+    print(contents)
+#Providing the secondary argument 'a' opens the file in append mode
+#This allows content to be added to a file without overwriting the contents
+#Append mode does not erase the file after file_object is returned
+#But write mode will create the file if it doesn't exist like write mode
