@@ -496,3 +496,19 @@ elif check == 'y':
     print(contents)
 else:
     print('Ok then')
+
+print('\n')
+
+inquiry = True
+while inquiry == True:
+    guest_name = input('Welcome to the party! Your name is...')
+    print(guest_name.title() + "! Come on in")
+    with open('guest.txt', 'a') as file_object:
+        file_object.write(guest_name)
+    thingy = input('Any more guests?')
+    if thingy == 'yes':
+        print('Ok, next guest')
+    else:
+        print("Ok, that's it.")
+        inquiry = False
+ 

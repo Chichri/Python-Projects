@@ -90,3 +90,61 @@ with open(filename) as file_object:
 #This allows content to be added to a file without overwriting the contents
 #Append mode does not erase the file after file_object is returned
 #But write mode will create the file if it doesn't exist like write mode
+
+print('\n')
+
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+#This is a try-except block
+#try-except handle exceptions, objects created when your program crashs
+#These exceptions divert the program so that it keeps running
+#Here, an impossible operation is attempted (5/0)
+#This produces the exception object ZeroDivisionError, which crashs the program
+#Instead of a crash, we give it instructions of what to do to continue running
+#In this case, the error instructions are to print 'You can't divide by zero'
+
+print('\n')
+
+print("Give me two numbers and I' divide them\n")
+print("Enter 'q' to quit")
+
+while True:
+    first_number = input("First number: \n")
+    if first_number == 'q':
+        break
+    second_number = input("Second number: \n")
+    if second_number == 'q':
+        break
+    answer = int(first_number) / int(second_number)
+    print(answer)
+#This code is a simple division calculator
+#With no error handling, the ZeroDivisionError will appear if second_number = 0
+#Worse still, this appears in the traceback which is printed to the console
+#tracebacks are meant to help you and only you to debug the programing
+#tracebacks will confuse non-technical users and help attacks hack you program
+#Therefore, you shouldn't let them appear in the final product
+
+print('\n')
+
+print("Let's do it again. Give me two numbers and I' divide them\n")
+print("Enter 'q' to quit")
+
+while True:
+    first_number = input("First number: \n")
+    if first_number == 'q':
+        break
+    second_number = input("Second number: \n")
+    if second_number == 'q':
+        break
+    try:
+        answer = int(first_number) / int(second_number)
+    except ZeroDivisionError:
+        print("You can't divide by zero")
+    else:
+        print(answer)
+#This is the same calculator, but with a try-except-else block on it
+#Here, we check for errors in the answer, with an exception given just in case
+#Upon a ZeroDivisionError being encountered, we print the previous error message
+#Then we provide an else, or what the program should do with no error
