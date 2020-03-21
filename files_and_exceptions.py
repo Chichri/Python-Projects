@@ -1,4 +1,4 @@
-with open('/Users/cole/Desktop/Coding_Projects/Python-Projects/pi_digits.txt') as file_object:
+with open('pi_digits.txt') as file_object:
     contents = file_object.read()
     print(contents)
 
@@ -15,7 +15,7 @@ with open('/Users/cole/Desktop/Coding_Projects/Python-Projects/pi_digits.txt') a
 
 print('\n')
 
-file_path = '/Users/cole/Desktop/Coding_Projects/Python-Projects/pi_digits.txt'
+file_path = 'pi_digits.txt'
 with open(file_path) as file_object:
     for line in file_object:
         print(line)
@@ -53,7 +53,7 @@ print(len(pi_string))
 print('\n')
 
 birthday = input('Enter your birthday in mmddyy format')
-if birthday in pi_string:
+if str(birthday) in pi_string:
     print('Your birthday is in the first 30 digits of pi. Litteraly how.')
 else:
     print('Your birthday is not in the first 30 digits of pi. Shocker.')
