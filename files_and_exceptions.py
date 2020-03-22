@@ -1,4 +1,4 @@
-with open('pi_digits.txt') as file_object:
+with open('Desktop/Coding_Projects/Python-Projects/pi_digits.txt') as file_object:
     contents = file_object.read()
     print(contents)
 
@@ -15,7 +15,7 @@ with open('pi_digits.txt') as file_object:
 
 print('\n')
 
-file_path = 'pi_digits.txt'
+file_path = 'Desktop/Coding_Projects/Python-Projects/pi_digits.txt'
 with open(file_path) as file_object:
     for line in file_object:
         print(line)
@@ -148,3 +148,17 @@ while True:
 #Here, we check for errors in the answer, with an exception given just in case
 #Upon a ZeroDivisionError being encountered, we print the previous error message
 #Then we provide an else, or what the program should do with no error
+
+print('\n')
+
+filename = 'nonexistent.txt'
+try:
+    with open(filename) as file_object:
+        contents = file_object.read()
+
+except FileNotFoundError:
+    msg = "Sorry, " + filename + " does not exist."
+    print(msg)
+#The FileNotFoundError is an extremly common error
+#This error occurs either when the file doesn't exist or the path is incorrect
+#Remeber: no tracebacks for the audience
