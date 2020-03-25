@@ -162,3 +162,16 @@ except FileNotFoundError:
 #The FileNotFoundError is an extremly common error
 #This error occurs either when the file doesn't exist or the path is incorrect
 #Remeber: no tracebacks for the audience
+
+print('\n')
+
+filename = 'programing.txt'
+with open (filename) as file_object:
+    contents = file_object.read()
+    words = contents.split()
+    count = len(words)
+    print('The file ' + filename + ' has approximatly ' + str(count) + ' words')
+#We can do much more woth text using the split.() method
+#split.() seperates text by spaces,storing the text between spaces in a list
+#with the individual chunks of text, we can extricate words and work with them
+#for example, we can count the words with len() and print that back output
