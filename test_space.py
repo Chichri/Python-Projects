@@ -539,4 +539,4 @@ def fav_num():
      with open(filename) as f_obj:
          doof = json.load(f_obj)
 
-print(doof) 
+print('I know your favorite number, it is ' + doof + '!')

@@ -260,7 +260,7 @@ else:
 print('\n')
 
 def ask():
-    username = input('What is your name?')
+    username = input('What is your username?')
 
     filename = 'username.json'
     with open(filename, 'w') as f_obj:
@@ -268,7 +268,7 @@ def ask():
         print("We'll remember you when you come back, " + username + '.\n')
 
 def check():
-    query = input("Whats your name?")
+    query = input("Whats your username?")
 
     with open(filename) as f_obj:
         checklist = json.load(f_obj)
