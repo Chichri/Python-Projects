@@ -175,3 +175,109 @@ with open (filename) as file_object:
 #split.() seperates text by spaces,storing the text between spaces in a list
 #with the individual chunks of text, we can extricate words and work with them
 #for example, we can count the words with len() and print that back output
+
+print('\n')
+
+path = 'Desktop/Coding_Projects/Python-Projects/'
+def count_words(filname):
+    with open(filename) as file_object:
+        contents = file_object.read()
+        words = contents.split()
+        count = len(words)
+        print('The file ' + filename + ' has approximatly '
+        + str(count) + ' words')
+
+filenames = [ path + 'pi_digits.txt', path+ 'programing.txt']
+for filename in filenames:
+    count_words(filename)
+#Until now, we've only been using open to work with individual files
+#This can be changed easily by using open() in a function
+#That way, we can work with multipe files in one line
+
+print('\n')
+
+filename = 'nonexistent.txt'
+try:
+    with open(filename) as file_object:
+        contents = file_object.read()
+except FileNotFoundError:
+    pass
+#Sometimes, even when you expect a certain error, you don't want to work with it
+#pass allows an except block to have no output, to "fail silently"
+#Sometimes the user doesn't need to know every kink in the program
+
+print('\n')
+
+import json
+
+numbers = [1,2,3,4,5,6,7,8,9]
+
+filename = 'numbers.json'
+with open(filename, 'w') as f_obj:
+    json.dump(numbers, f_obj)
+#This block of code uses the JSON module
+#JSON (Javascript Object Notation) format was develped for Javascript, but has-
+#- become common in many languages, including python
+#The JSON module is quite useful for storing data within files
+#The file is declared with the json file extension because it's customary
+#json.dump() is a function that takes two arguments, some data and a file
+#it then simply stores the data within that file in a "dump" of information
+#This file has no output, but we've now stored numbers in numbers.json
+
+print('\n')
+
+with open(filename) as f_obj:
+    numbers2 = json.load(f_obj)
+
+print(numbers2)
+#This code uses json.load(), allmost the extact opposite of json.dump()
+#json.load() takes only one argument, the file
+#It then load the data into wherever it is being assigned to
+
+print('\n')
+
+username = input('What is your name?')
+
+filename = 'username.json'
+with open(filename, 'w') as f_obj:
+    json.dump(username, f_obj)
+    print("We'll remember you when you come back, " + username + '.\n')
+
+print('\n')
+
+query = input("Whats your name?")
+
+with open(filename) as f_obj:
+    checklist = json.load(f_obj)
+if query in checklist:
+    print("Yes, I remember you, you're " + query + "!")
+else:
+    print("No, I don't believe we've met before.")
+#Here's an example of using both json.dump() and json.load() in conjunction
+#Nothing particularly new, but note how they work so well together
+#If you can't tell, I'm skimming the textbook a bit here
+
+print('\n')
+
+def ask():
+    username = input('What is your name?')
+
+    filename = 'username.json'
+    with open(filename, 'w') as f_obj:
+        json.dump(username, f_obj)
+        print("We'll remember you when you come back, " + username + '.\n')
+
+def check():
+    query = input("Whats your name?")
+
+    with open(filename) as f_obj:
+        checklist = json.load(f_obj)
+    if query in checklist:
+        print("Yes, I remember you, you're " + query + "!")
+    else:
+        print("No, I don't believe we've met before.")
+#This is an example of refactoring
+#Refactoring is when you take a program and break it down into function
+#By doing this, you can improve the logic of the code and make it clearer
+#It also aids the tracebacks and the debuging of the program as a whole
+#when possible, refactor. No one wants large unwieldy blocks of code

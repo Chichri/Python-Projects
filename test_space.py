@@ -511,4 +511,32 @@ while inquiry == True:
     else:
         print("Ok, that's it.")
         inquiry = False
- 
+
+print('\n')
+
+while True:
+    first_number = input("First number: \n")
+    second_number = input("Second number: \n")
+    try:
+        answer = int(first_number) / int(second_number)
+    except ValueError:
+        print("It would appear that you entered a non-number; please try again")
+    else:
+        print(answer)
+        break
+
+print('\n')
+
+fav_num = input('What is your favorite number')
+filename = 'fav_num.json'
+def fav_num():
+    with open(filename, 'w') as f_obj:
+        json.dump(f_obj, fav_num)
+
+ fav_num()
+
+ def read_num():
+     with open(filename) as f_obj:
+         doof = json.load(f_obj)
+
+print(doof) 
