@@ -527,16 +527,50 @@ while True:
 
 print('\n')
 
-fav_num = input('What is your favorite number')
-filename = 'fav_num.json'
-def fav_num():
-    with open(filename, 'w') as f_obj:
-        json.dump(f_obj, fav_num)
+import json
 
- fav_num()
+number = input("What's your favorite number? ")
 
- def read_num():
-     with open(filename) as f_obj:
-         doof = json.load(f_obj)
+with open('favorite_number.json', 'w') as f:
+    json.dump(number, f)
+    print("Thanks! I'll remember that.")
 
-print('I know your favorite number, it is ' + doof + '!')
+with open('favorite_number.json') as f:
+    number = json.load(f)
+
+print("I know your favorite number! It's " + str(number) + ".")
+
+print('\n')
+
+import unittest
+
+class Employee():
+    def __init__(self, firstname, lastname, salary):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.salary = salary
+        self.answer = input('default raise? Y/N\n')
+        self.pos = ['yes', 'Yes', 'Y', 'y']
+        self.neg = ['no', 'No', 'N', 'n']
+        self.temp = 0
+
+    def give_raise(self):
+        if self.answer in self.pos:
+            self.salary = self.salary + 5000
+        else:
+            cash = input("What amount should the raise be?\n")
+            self.temp = self.salary + int(cash)
+            self.salary = self.salary + int(cash)
+        print(self.salary)
+
+paul_blart = Employee('Paul', 'Blart', 1200)
+
+class TestEmployee(unittest.TestCase):
+    def test_give_raise(self):
+        paul_blart.give_raise()
+        if paul_blart.answer in paul_blart.pos:
+            self.assertEqual(paul_blart.salary, 6200)
+        else:
+            self.assertEqual(paul_blart.salary, paul_blart.temp)
+
+unittest.main()
